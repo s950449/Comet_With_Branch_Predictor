@@ -2,3 +2,6 @@
 	path = src/synthesize
 	url = https://github.com/kurimulion/comet.git
 	branch = core_restructure
+[submodule "src/simulate"]
+	path = src/simulate
+	url = https://github.com/Leng-Kai/Comet.git
