@@ -22,6 +22,7 @@ Synthesizable RISC-V processor (COMET) with branch predictor
 * GCC
 * CMake
 * GNU Make
+* riscv-gnu-toolchain
 ### Cloning this repo
 * Clone this repo and all of submodules
 ```
@@ -56,7 +57,9 @@ Then we finally generate a Vivado IP under `./src/synthesize/synthesizable/vivad
     * PerceptronBranchPredictor <SIZE,BITS,ENTRIES,THRESHOLD,LR>
     * PerceptronBranchPredictorV2 <SIZE,BITS,ENTRIES,THRESHOLD,LR>
 
-
+## Test Files
+* Test file is under `tests/`(symbolic link points to `src/simulate/tests/basic_tests`)
+* Use simulator with those riscv32 files in `tests/`
 ## Reference
 * [What You Simulate Is What You Synthesize: Designing a Processor Core from C++ Specifications](https://hal.archives-ouvertes.fr/hal-02303453/document)
 * [A new organization for a perceptron-based branch predictor and its FPGA implementation](https://ieeexplore.ieee.org/document/1430166)
