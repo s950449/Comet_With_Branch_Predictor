@@ -68,3 +68,5 @@ Then we finally generate a Vivado IP under `./src/synthesize/synthesizable/vivad
 * [Two-Level Adaptive Training Branch Prediction RISC-V-On-PYNQ](https://github.com/drichmond/RISC-V-On-PYNQ)
 
 ## LICENSE
+
+The project is under MIT License.
