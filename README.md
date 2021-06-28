@@ -6,7 +6,7 @@ Synthesizable RISC-V processor (COMET) with branch predictor
 .
 +-- src/    
 |   +--simulate/
-|   +--synthesize/
+|   |--synthesize/
 |
 +-- impl_test/
 |
@@ -15,6 +15,34 @@ Synthesizable RISC-V processor (COMET) with branch predictor
 |
 +-- LICENSE
 ```
+## Environment
+* Vivado HLS 2019.2
+* GCC
+* CMake
+* GNU Make
+## Build
+* Clone this repo and all of submodules
+```
+$ git clone --recursive https://github.com/s950449/Comet_With_Branch_Predictor.git
+```
+In Project Directory
+### Building Simulator
+```
+$ cd src/simulate/
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+Use `$ ./src/simulate/build/bin/comet.sim --file <test_file.riscv32>` to execute simulator
+* Modify `using BranchPredictor = <branch-predictor-type>`
+ in `./src/simulate/include/branchPredictor.h` to use different branch predictor. 
+* Branch Predictor Type
+    * BitBranchPredictor <BITS,ENTRIES>
+    * PerceptronBranchPredictor <SIZE,BITS,ENTRIES,THRESHOLD,LR>
+    * PerceptronBranchPredictorV2 <SIZE,BITS,ENTRIES,THRESHOLD,LR>
+
+
 ## Reference
 * [What You Simulate Is What You Synthesize: Designing a Processor Core from C++ Specifications](https://hal.archives-ouvertes.fr/hal-02303453/document)
 * [A new organization for a perceptron-based branch predictor and its FPGA implementation](https://ieeexplore.ieee.org/document/1430166)
