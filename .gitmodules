@@ -1,0 +1,4 @@
+[submodule "src/synthesize"]
+	path = src/synthesize
+	url = https://github.com/kurimulion/comet.git
+	branch = core_restructure
