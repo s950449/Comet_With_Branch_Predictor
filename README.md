@@ -36,7 +36,19 @@ $ make
 ```
 Use `$ ./src/simulate/build/bin/comet.sim --file <test_file.riscv32>` to execute simulator
 * Modify `using BranchPredictor = <branch-predictor-type>`
- in `./src/simulate/include/branchPredictor.h` to use different branch predictor. 
+ in `./src/simulate/include/branchPredictor.h` before compiling to use different branch predictor. 
+* Branch Predictor Type
+    * BitBranchPredictor <BITS,ENTRIES>
+    * PerceptronBranchPredictor <SIZE,BITS,ENTRIES,THRESHOLD,LR>
+    * PerceptronBranchPredictorV2 <SIZE,BITS,ENTRIES,THRESHOLD,LR>
+### Synthesize 
+```
+$ cd src/synthesize/synthesizable/vivado
+$ vivado_hls -f script.tcl
+```
+Then we finally generate a Vivado IP under `./src/synthesize/synthesizable/vivado/doCore`
+* Modify `using BranchPredictor = <branch-predictor-type>`
+ in `./src/synthesize/synthesizable/include/branchPredictor.h` before compiling to use different branch predictor. 
 * Branch Predictor Type
     * BitBranchPredictor <BITS,ENTRIES>
     * PerceptronBranchPredictor <SIZE,BITS,ENTRIES,THRESHOLD,LR>
