@@ -15,12 +15,14 @@ Synthesizable RISC-V processor (COMET) with branch predictor
 |
 +-- LICENSE
 ```
-## Environment
+
+## Build Setup
+### Environment
 * Vivado HLS 2019.2
 * GCC
 * CMake
 * GNU Make
-## Build
+### Cloning this repo
 * Clone this repo and all of submodules
 ```
 $ git clone --recursive https://github.com/s950449/Comet_With_Branch_Predictor.git
