@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vivado HLS Report for 'execute'
+================================================================
+* Date:           Tue Jun 29 14:33:43 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        doCore
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z010-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 8.50 ns | 5.110 ns |   1.06 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1| 8.500 ns | 8.500 ns |    1|    1|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|   1092|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|      -|      -|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|     58|    -|
+|Register         |        -|      -|    280|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|    280|   1150|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      120|     80|  35200|  17600|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |      6|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |add_ln214_fu_1036_p2       |     +    |      0|  0|  32|          32|          32|
+    |grp_fu_700_p2              |     +    |      0|  0|  32|          32|          32|
+    |grp_fu_706_p2              |     +    |      0|  0|  32|          32|           3|
+    |sub_ln68_fu_842_p2         |     -    |      0|  0|  32|          32|          32|
+    |and_ln1355_1_fu_754_p2     |    and   |      0|  0|  32|          32|          32|
+    |and_ln1355_fu_766_p2       |    and   |      0|  0|  32|          32|          32|
+    |and_ln299_fu_952_p2        |    and   |      0|  0|   1|           1|           1|
+    |and_ln440_1_fu_1046_p2     |    and   |      0|  0|   1|           1|           1|
+    |and_ln440_2_fu_1051_p2     |    and   |      0|  0|   1|           1|           1|
+    |and_ln440_fu_1042_p2       |    and   |      0|  0|   1|           1|           1|
+    |grp_fu_676_p2              |    and   |      0|  0|  32|          32|          32|
+    |r_V_1_fu_868_p2            |   ashr   |      0|  0|  85|          32|          32|
+    |r_V_7_fu_792_p2            |   ashr   |      0|  0|  85|          32|          32|
+    |grp_fu_688_p2              |   icmp   |      0|  0|  12|          32|          32|
+    |grp_fu_694_p2              |   icmp   |      0|  0|  12|          32|          32|
+    |icmp_ln299_1_fu_958_p2     |   icmp   |      0|  0|   2|           3|           3|
+    |icmp_ln299_2_fu_972_p2     |   icmp   |      0|  0|   2|           3|           3|
+    |icmp_ln299_3_fu_986_p2     |   icmp   |      0|  0|   2|           3|           4|
+    |icmp_ln299_4_fu_1000_p2    |   icmp   |      0|  0|   2|           3|           1|
+    |icmp_ln299_5_fu_1014_p2    |   icmp   |      0|  0|   2|           3|           1|
+    |icmp_ln299_fu_946_p2       |   icmp   |      0|  0|   2|           3|           2|
+    |icmp_ln879_fu_910_p2       |   icmp   |      0|  0|  12|          32|          32|
+    |icmp_ln883_fu_916_p2       |   icmp   |      0|  0|  12|          32|          32|
+    |icmp_ln891_1_fu_934_p2     |   icmp   |      0|  0|  12|          32|          32|
+    |icmp_ln891_fu_922_p2       |   icmp   |      0|  0|  12|          32|          32|
+    |r_V_2_fu_874_p2            |   lshr   |      0|  0|  85|          32|          32|
+    |r_V_8_fu_798_p2            |   lshr   |      0|  0|  85|          32|          32|
+    |ret_V_1_fu_742_p2          |    or    |      0|  0|  32|          32|          32|
+    |r_V_3_fu_880_p3            |  select  |      0|  0|  32|           1|          32|
+    |r_V_9_fu_804_p3            |  select  |      0|  0|  32|           1|          32|
+    |select_ln299_1_fu_978_p3   |  select  |      0|  0|   2|           1|           1|
+    |select_ln299_2_fu_992_p3   |  select  |      0|  0|   2|           1|           1|
+    |select_ln299_3_fu_1006_p3  |  select  |      0|  0|   2|           1|           1|
+    |select_ln299_4_fu_1020_p3  |  select  |      0|  0|   2|           1|           1|
+    |select_ln299_fu_964_p3     |  select  |      0|  0|   2|           1|           1|
+    |select_ln319_fu_1028_p3    |  select  |      0|  0|  32|           1|          32|
+    |select_ln369_fu_848_p3     |  select  |      0|  0|  32|           1|          32|
+    |r_V_6_fu_828_p2            |    shl   |      0|  0|  85|          32|          32|
+    |r_V_fu_896_p2              |    shl   |      0|  0|  85|          32|          32|
+    |grp_fu_682_p2              |    xor   |      0|  0|  32|          32|          32|
+    |r_V_4_fu_760_p2            |    xor   |      0|  0|  32|          32|           2|
+    |r_V_5_fu_748_p2            |    xor   |      0|  0|  32|          32|           2|
+    |xor_ln891_1_fu_940_p2      |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln891_fu_928_p2        |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|1092|         769|         802|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |   3|          3|    1|          3|
+    |ap_return_0                 |   3|          2|   32|         64|
+    |ap_return_1                 |   3|          2|   32|         64|
+    |ap_return_10                |   3|          2|    1|          2|
+    |ap_return_11                |   3|          2|    1|          2|
+    |ap_return_12                |   3|          2|    1|          2|
+    |ap_return_2                 |   3|          2|   32|         64|
+    |ap_return_3                 |   3|          2|    5|         10|
+    |ap_return_4                 |   3|          2|    1|          2|
+    |ap_return_5                 |   3|          2|    1|          2|
+    |ap_return_6                 |   3|          2|    7|         14|
+    |ap_return_7                 |   3|          2|    3|          6|
+    |ap_return_8                 |   3|          2|   32|         64|
+    |ap_return_9                 |   3|          2|   32|         64|
+    |extoMem_isBranch_1_reg_488  |   3|          3|    1|          3|
+    |phi_ln445_1_reg_382         |   3|          2|   32|         64|
+    |phi_ln445_2_reg_596         |   6|         15|   32|        480|
+    |phi_ln445_reg_281           |   4|          5|   32|        160|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  58|         54|  278|       1070|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                     |   2|   0|    2|          0|
+    |ap_return_0_preg              |  32|   0|   32|          0|
+    |ap_return_10_preg             |   1|   0|    1|          0|
+    |ap_return_11_preg             |   1|   0|    1|          0|
+    |ap_return_12_preg             |   1|   0|    1|          0|
+    |ap_return_1_preg              |  32|   0|   32|          0|
+    |ap_return_2_preg              |  32|   0|   32|          0|
+    |ap_return_3_preg              |   5|   0|    5|          0|
+    |ap_return_4_preg              |   1|   0|    1|          0|
+    |ap_return_5_preg              |   1|   0|    1|          0|
+    |ap_return_6_preg              |   7|   0|    7|          0|
+    |ap_return_7_preg              |   3|   0|    3|          0|
+    |ap_return_8_preg              |  32|   0|   32|          0|
+    |ap_return_9_preg              |  32|   0|   32|          0|
+    |extoMem_isBranch_1_reg_488    |   1|   0|    1|          0|
+    |extoMem_isLongInstru_reg_172  |   1|   0|    1|          0|
+    |phi_ln445_1_reg_382           |  32|   0|   32|          0|
+    |phi_ln445_2_reg_596           |  32|   0|   32|          0|
+    |phi_ln445_reg_281             |  32|   0|   32|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 280|   0|  280|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs |        execute        | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs |        execute        | return value |
+|ap_start               |  in |    1| ap_ctrl_hs |        execute        | return value |
+|ap_done                | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_idle                | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_ready               | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_return_0            | out |   32| ap_ctrl_hs |        execute        | return value |
+|ap_return_1            | out |   32| ap_ctrl_hs |        execute        | return value |
+|ap_return_2            | out |   32| ap_ctrl_hs |        execute        | return value |
+|ap_return_3            | out |    5| ap_ctrl_hs |        execute        | return value |
+|ap_return_4            | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_return_5            | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_return_6            | out |    7| ap_ctrl_hs |        execute        | return value |
+|ap_return_7            | out |    3| ap_ctrl_hs |        execute        | return value |
+|ap_return_8            | out |   32| ap_ctrl_hs |        execute        | return value |
+|ap_return_9            | out |   32| ap_ctrl_hs |        execute        | return value |
+|ap_return_10           | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_return_11           | out |    1| ap_ctrl_hs |        execute        | return value |
+|ap_return_12           | out |    1| ap_ctrl_hs |        execute        | return value |
+|extoMem_pc_V_write     |  in |   32|   ap_none  |   extoMem_pc_V_write  |    scalar    |
+|extoMem_instruction_s  |  in |   32|   ap_none  | extoMem_instruction_s |    scalar    |
+|extoMem_opCode_V_wri   |  in |    7|   ap_none  |  extoMem_opCode_V_wri |    scalar    |
+|dctoEx_funct7_V        |  in |    7|   ap_none  |    dctoEx_funct7_V    |    scalar    |
+|extoMem_funct3_V_wri   |  in |    3|   ap_none  |  extoMem_funct3_V_wri |    scalar    |
+|dctoEx_lhs_V           |  in |   32|   ap_none  |      dctoEx_lhs_V     |    scalar    |
+|dctoEx_rhs_V           |  in |   32|   ap_none  |      dctoEx_rhs_V     |    scalar    |
+|dctoEx_datac_V         |  in |   32|   ap_none  |     dctoEx_datac_V    |    scalar    |
+|dctoEx_nextPCDC_V      |  in |   32|   ap_none  |   dctoEx_nextPCDC_V   |    scalar    |
+|dctoEx_predBranch      |  in |    1|   ap_none  |   dctoEx_predBranch   |    scalar    |
+|dctoEx_useRd           |  in |    1|   ap_none  |      dctoEx_useRd     |    scalar    |
+|extoMem_rd_V_write     |  in |    5|   ap_none  |   extoMem_rd_V_write  |    scalar    |
+|extoMem_we_write       |  in |    1|   ap_none  |    extoMem_we_write   |    scalar    |
++-----------------------+-----+-----+------------+-----------------------+--------------+
+

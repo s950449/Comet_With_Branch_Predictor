@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_update'
+================================================================
+* Date:           Tue Jun 29 14:38:00 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        doCore
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z010-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 8.50 ns | 7.087 ns |   1.06 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max    | min | max |   Type  |
+    +---------+---------+----------+-----------+-----+-----+---------+
+    |        1|        2| 8.500 ns | 17.000 ns |    1|    2|   none  |
+    +---------+---------+----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|    134|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |        -|      -|      -|      -|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|     34|    -|
+|Register         |        -|      -|     39|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |        0|      0|     39|    168|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      120|     80|  35200|  17600|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0  |   ~0  |    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |add_ln700_fu_265_p2    |     +    |      0|  0|  16|          16|           1|
+    |add_ln701_fu_252_p2    |     +    |      0|  0|  16|          16|           2|
+    |add_ln887_1_fu_236_p2  |     +    |      0|  0|   8|           8|           1|
+    |add_ln887_fu_221_p2    |     +    |      0|  0|   8|           8|           2|
+    |grp_fu_145_p2          |     +    |      0|  0|  16|          16|           3|
+    |grp_fu_158_p2          |     +    |      0|  0|  16|          16|           2|
+    |sub_ln887_fu_215_p2    |     -    |      0|  0|   8|           8|           8|
+    |and_ln194_fu_183_p2    |    and   |      0|  0|   1|           1|           1|
+    |grp_fu_139_p2          |   icmp   |      0|  0|   7|          16|          16|
+    |grp_fu_152_p2          |   icmp   |      0|  0|   7|          16|          15|
+    |icmp_ln194_fu_177_p2   |   icmp   |      0|  0|  12|          32|           5|
+    |icmp_ln887_fu_259_p2   |   icmp   |      0|  0|   7|          16|          15|
+    |icmp_ln895_fu_246_p2   |   icmp   |      0|  0|   7|          16|          16|
+    |xor_ln194_1_fu_171_p2  |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln194_fu_165_p2    |    xor   |      0|  0|   1|           1|           1|
+    |xor_ln211_fu_272_p2    |    xor   |      0|  0|   1|           1|           1|
+    |xor_ln218_fu_276_p2    |    xor   |      0|  0|   1|           1|           1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      0|  0| 134|         189|          92|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |                              Name                              | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |PerceptronBranchPred_6_reg_130                                  |   3|          2|    1|          2|
+    |PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_address0  |   3|          3|    7|         21|
+    |PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_address1  |   4|          5|    7|         35|
+    |PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_d0        |   3|          3|   16|         48|
+    |PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_d1        |   3|          3|   16|         48|
+    |ap_NS_fsm                                                       |   3|          4|    1|          4|
+    |ap_phi_mux_PerceptronBranchPred_6_phi_fu_133_p4                 |   3|          2|    1|          2|
+    |ap_phi_mux_phi_ln230_phi_fu_124_p4                              |   3|          2|    1|          2|
+    |ap_return_0                                                     |   3|          2|    1|          2|
+    |ap_return_1                                                     |   3|          2|    1|          2|
+    |phi_ln230_reg_121                                               |   3|          2|    1|          2|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                           |  34|         30|   53|        168|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+---+----+-----+-----------+
+    |              Name              | FF| LUT| Bits| Const Bits|
+    +--------------------------------+---+----+-----+-----------+
+    |PerceptronBranchPred_4_reg_322  |  7|   0|    7|          0|
+    |PerceptronBranchPred_5_reg_327  |  7|   0|    7|          0|
+    |PerceptronBranchPred_6_reg_130  |  1|   0|    1|          0|
+    |PerceptronBranchPred_7_reg_332  |  7|   0|    7|          0|
+    |and_ln194_reg_312               |  1|   0|    1|          0|
+    |ap_CS_fsm                       |  3|   0|    3|          0|
+    |ap_return_0_preg                |  1|   0|    1|          0|
+    |ap_return_1_preg                |  1|   0|    1|          0|
+    |phi_ln230_reg_121               |  1|   0|    1|          0|
+    |sub_ln887_reg_316               |  8|   0|    8|          0|
+    |xor_ln211_reg_343               |  1|   0|    1|          0|
+    |xor_ln218_reg_347               |  1|   0|    1|          0|
+    +--------------------------------+---+----+-----+-----------+
+    |Total                           | 39|   0|   39|          0|
+    +--------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|                            RTL Ports                           | Dir | Bits|  Protocol  |                     Source Object                     |    C Type    |
++----------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+|ap_clk                                                          |  in |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_rst                                                          |  in |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_start                                                        |  in |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_done                                                         | out |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_idle                                                         | out |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_ready                                                        | out |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_return_0                                                     | out |    1| ap_ctrl_hs |                        _update                        | return value |
+|ap_return_1                                                     | out |    1| ap_ctrl_hs |                        _update                        | return value |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_address0  | out |    7|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_ce0       | out |    1|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_we0       | out |    1|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_d0        | out |   16|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_q0        |  in |   16|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_address1  | out |    7|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_ce1       | out |    1|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_we1       | out |    1|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_d1        | out |   16|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V_q1        |  in |   16|  ap_memory | PerceptronBranchPredictorV2_2_16_32_17_1_perceptron_V |     array    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_bht_0_read             |  in |    1|   ap_none  |  PerceptronBranchPredictorV2_2_16_32_17_1_bht_0_read  |    scalar    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_bht_1_read             |  in |    1|   ap_none  |  PerceptronBranchPredictorV2_2_16_32_17_1_bht_1_read  |    scalar    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_dp_read                |  in |   32|   ap_none  |    PerceptronBranchPredictorV2_2_16_32_17_1_dp_read   |    scalar    |
+|PerceptronBranchPredictorV2_2_16_32_17_1_pd_read                |  in |    1|   ap_none  |    PerceptronBranchPredictorV2_2_16_32_17_1_pd_read   |    scalar    |
+|pc_V                                                            |  in |   32|   ap_none  |                          pc_V                         |    scalar    |
+|isBranch                                                        |  in |    1|   ap_none  |                        isBranch                       |    scalar    |
++----------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------+--------------+
+
