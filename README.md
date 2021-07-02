@@ -1,6 +1,6 @@
 # Readme
 ## Introduction
-Synthesizable RISC-V processor (COMET) with branch predictor
+Synthesizable RISC-V processor ([COMET](https://gitlab.inria.fr/srokicki/Comet)) with branch predictor.
 ## Major Optimization
 * Add branch predictor for branch instructions
 * Logging instruction history to enhance prediction
