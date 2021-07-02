@@ -6,18 +6,20 @@ Synthesizable RISC-V processor ([COMET](https://gitlab.inria.fr/srokicki/Comet))
 * Logging instruction history to enhance prediction
 * Compare with original design, the cpu cycle decrease by about 10%
 ## Folder structure
-```
+```      
 .
-+-- src/    
-|   +--simulate/
-|   |--synthesize/
-|
-+-- impl_test/
-|
-|
-+-- README.md
-|
-+-- LICENSE
+├── docs
+│   └── ACA_final.pdf
+├── impl_result
+│   ├── bits
+│   ├── correlating
+│   └── perceptronv2
+├── LICENSE
+├── README.md
+├── src
+│   ├── simulate
+│   └── synthesize
+└── tests -> src/simulate/tests/basic_tests
 ```
 
 ## Build Setup
