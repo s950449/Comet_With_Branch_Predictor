@@ -1,6 +1,10 @@
 # Readme
 ## Introduction
 Synthesizable RISC-V processor (COMET) with branch predictor
+## Major Optimization
+* Add branch predictor for branch instructions
+* Logging instruction history to enhance prediction
+* Compare with original design, the cpu cycle decrease by about 10%
 ## Folder structure
 ```
 .
